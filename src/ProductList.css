@@ -50,6 +50,7 @@ body {
 .product-list {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 50px;
     /* background-color: pink; */
     /* justify-content: space-between; */
@@ -79,6 +80,7 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
     z-index: 1;
+    cursor: pointer;
 }
 
 .product-title {
@@ -161,9 +163,33 @@ body {
     font-size: 19px;
 }
 .cart{
+    position: relative;
+    margin-left: 50px;
     color: white;
     display: flex;
 }
+
+.cart-count {
+    position: absolute;
+    z-index: 2;
+
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+
+    width: 26px;
+    height: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    pointer-events: none;
+}
+
 .cart_quantity_count{
     margin-top: 16px;
     /* background-color: red; */
@@ -181,7 +207,8 @@ body {
 .plant_heading{
     width: 400px;
     text-align: center;
-    margin: 20px;
+    margin: auto;
+    margin-top: 20px;
     border: 1px solid rgb(5, 4, 4);
     border-left: none;
     border-right: none;
